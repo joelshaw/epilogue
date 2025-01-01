@@ -6,10 +6,16 @@ Epilogue is the ultimate app for book lovers who want to not only track their re
 
 Frontend Repo:
 
-- **/src**: Contains the application's source code
-- **/public**: Holds static files such as images, fonts, or public index.html for single-page applications.
-- **package.json**: Lists the project's dependencies and scripts for building, testing, and deploying the app.
-- **.gitignore**: Specifies files and directories to be ignored by Git.
-- **README.md**: Provides an overview of the project, setup instructions, and other documentation.
+- **src**: # Source code
+- **public**: # Static assets
+- **package.json**: # Dependencies
+- **.gitignore**: # Git ignore file
+- **README.md**: # Project documentation
 
 Backend Repo:
+
+- **src**: # Source code
+- **public**: # Static assets
+- **package.json**: # Dependencies
+- **.gitignore**: # Git ignore file
+- **README.md**: # Project documentation
