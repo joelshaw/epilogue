@@ -1,4 +1,4 @@
-name: Epilogue - Deploy FE
+name: Epilogue Deployment
 
 on:
   push:
