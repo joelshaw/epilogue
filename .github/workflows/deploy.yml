@@ -26,6 +26,11 @@ jobs:
         working-directory: ./FrontEnd
         run: npm run build
 
+      - name: Debug environment
+        run: |
+          echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_REGION: ${AWS_REGION}"
+
       - name: Upload to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
