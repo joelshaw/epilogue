@@ -25,16 +25,10 @@ jobs:
       - name: Build FrontEnd
         working-directory: ./FrontEnd
         run: npm run build
-
-      - name: Debug environment
-        run: |
-          echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
-          echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-
       - name: Upload to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-          args: --acl public-read --follow-symlinks --delete
+          args: ./build/ s3://epilogue-app-fe --acl public-read --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: epilogue-app-fe # Replace with your bucket name
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
