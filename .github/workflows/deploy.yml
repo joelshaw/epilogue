@@ -28,7 +28,7 @@ jobs:
       - name: Upload to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-          args: ./build/ s3://epilogue-app-fe --acl public-read --follow-symlinks --delete
+          args: ./out/ s3://epilogue-app-fe --acl public-read --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: epilogue-app-fe # Replace with your bucket name
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
